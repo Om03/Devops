@@ -1,9 +1,17 @@
-FROM python:3.8
+FROM ubuntu
+RUN apt-get update -y && \ 
+    apt-get install -y python3-pip python-dev
 
-COPY . .
+RUN mkdir app
+
+COPY ./requirements.txt /app/requirements.txt
+
+WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python"]
+COPY . .
 
-CMD ["app.py"]
+ENTRYPOINT [ "python3" ]
+
+CMD [ "app.py" ]
