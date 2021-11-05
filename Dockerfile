@@ -8,6 +8,4 @@ RUN cat requirements.txt
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "python" ]
-
-CMD [ "app.py" ]
+CMD [ "cat reqirements.txt" ]
