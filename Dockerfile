@@ -7,3 +7,5 @@ COPY . .
 RUN cat requirements.txt
 
 RUN pip install -r requirements.txt
+
+CMD [ "flask run" ]
