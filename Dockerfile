@@ -8,4 +8,6 @@ RUN cat requirements.txt
 
 RUN pip install -r requirements.txt
 
-CMD [ "flask run" ]
+ENTRYPOINT ["python3"]
+
+CMD ["app.py"]
