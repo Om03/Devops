@@ -8,7 +8,7 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}} , support_credentials=True)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def getmap():
     return "Hello World"
 
