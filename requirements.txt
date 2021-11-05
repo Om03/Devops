@@ -1,0 +1,6 @@
+folium
+flask
+flask_cors
+python-dotenv
+pandas
+waitress
