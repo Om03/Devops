@@ -1,15 +1,9 @@
-FROM ubuntu
-RUN apt-get update -y && \ 
-    apt-get install -y python3-pip python-dev
+FROM python:3.8
 
 COPY . .
 
-RUN cat requirements.txt
-
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
-
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["python"]
 
 CMD ["app.py"]
